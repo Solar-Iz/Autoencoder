@@ -56,7 +56,7 @@ def page_preprocessing():
 def page_clearing():
     st.title('Clear your docs')
     model_cleaning = ImprovedConvAutoencoder()
-    model_cleaning.load_state_dict(torch.load('/home/svetlana/Bootcamp/ds-phase-2/Streamlit/best_weights4L.pth', map_location=torch.device('cpu')))
+    model_cleaning.load_state_dict(torch.load('best_weights4L.pth', map_location=torch.device('cpu')))
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
